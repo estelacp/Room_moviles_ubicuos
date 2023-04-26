@@ -41,9 +41,6 @@ class MainViewModel(val nameDao: NameSurnameDao): ViewModel() {
 }
 
 
-
-
-
 /*
 package com.example.room
 
