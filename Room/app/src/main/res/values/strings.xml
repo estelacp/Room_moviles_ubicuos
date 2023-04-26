@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Room</string>
+    <string name="title">View Model Live Data</string>
+    <string name="edit_name">Nombre</string>
+    <string name="edit_surname">Apellidos</string>
+    <string name="save_button">Añadir</string>
+    <string name="title_name_surname">Nombre y apellidos:</string>
+</resources>
