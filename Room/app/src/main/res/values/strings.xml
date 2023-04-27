@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">Room</string>
-    <string name="title" translatable="false">View Model Live Data</string>
+    <string name="title" translatable="false">View Model, Live Data y Room</string>
     <string name="edit_name">Name</string>
     <string name="edit_surname">Surname</string>
     <string name="save_button">Add</string>

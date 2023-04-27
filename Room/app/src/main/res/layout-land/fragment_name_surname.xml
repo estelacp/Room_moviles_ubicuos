@@ -36,12 +36,11 @@
                         android:id="@+id/title"
                         android:layout_width="276dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="17dp"
                         android:text="@string/title"
                         android:textColor="@color/dark_cyan"
-                        android:textSize="27sp"
+                        android:textSize="20sp"
                         android:textStyle="bold|italic" />
 
                     <EditText
@@ -99,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:text="@string/title_name_surname"/>
