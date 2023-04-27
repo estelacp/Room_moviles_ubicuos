@@ -24,10 +24,10 @@ Al crear un proyecto de Kotlin en Android Studio, se genera la carpeta "app" y l
 
 Cuando se ejecute nuestra aplicación observaremos distintos elementos: el título de nuestra app "Room"; dos "EditText" para introducir el nombre y apellido del cliente; un botón para poder guardar los datos del cliente y listar dicha información debajo de los "EditText"; un "TextView" como título "Nombre y apellidos:" para indicar la región en la que aparecerán los datos guardados de los distintos clientes; y otro "TextView" para mostrar dichos datos de cada cliente. Además, observamos otro botón para poder eliminar la base de datos completa. De forma que. podemos ver que, al hacer click en dicho botón, se vacía: 
 
-    - El TextView en el que se guardan los datos de los distintos clientes tras hacer click en el botón de "Añadir".
-    - La tabla de datos de "App Inspection".
+- El TextView en el que se guardan los datos de los distintos clientes tras hacer click en el botón de "Añadir".
+- La tabla de datos de "App Inspection".
 
-    Nota: hay que tener especial cuidado al hacer click en el botón de "Eliminar datos" ya que, sin darnos cuenta, podemos eliminar datos que no deseamos eliminar y ya no podemos recuperarlos.
+Nota: hay que tener especial cuidado al hacer click en el botón de "Eliminar datos" ya que, sin darnos cuenta, podemos eliminar datos que no deseamos eliminar y ya no podemos recuperarlos.
 
 Si giramos la orientación del dispositivo, podemos observar que se persistirá esta información y esto, lo realizamos utilizando View Model.
 
