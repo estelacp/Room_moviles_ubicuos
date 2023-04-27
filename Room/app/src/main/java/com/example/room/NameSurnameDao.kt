@@ -3,17 +3,13 @@ package com.example.room
 import androidx.room.*
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Update
 
 
-//El DAO (Data Access Object) NameSurnameDao,
-// que contendrá los métodos para realizar
+//El DAO NameSurnameDao,
+// contiene los métodos para realizar
 // operaciones con los datos de la entidad.
-// En este caso, necesitamos métodos para insertar y
-// obtener los datos.
 @Dao
 interface NameSurnameDao {
     @Insert
@@ -27,4 +23,8 @@ interface NameSurnameDao {
 
     @Query("SELECT * FROM nameSurnameTable ORDER BY id DESC")
     fun getAll(): LiveData<List<NameSurname>>
+
+    @Query("DELETE FROM nameSurnameTable")
+    suspend fun deleteAll()
+
 }

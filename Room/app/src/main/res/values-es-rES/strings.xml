@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit_name">Nombre</string>
+    <string name="edit_surname">Apellidos</string>
+    <string name="save_button">Añadir</string>
+    <string name="remove_button">Eliminar datos</string>
+    <string name="title_name_surname">Nombre y apellidos:</string>
+</resources>

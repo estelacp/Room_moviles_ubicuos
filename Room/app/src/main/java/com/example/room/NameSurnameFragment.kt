@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.room.databinding.FragmentNameSurnameBinding
 
 
-
 class NameSurnameFragment : Fragment() {
 
     private lateinit var binding: FragmentNameSurnameBinding
@@ -23,6 +22,7 @@ class NameSurnameFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_name_surname, container, false)
 
+
         val application = requireNotNull(this.activity).application
         val nameDao = NameSurnameDatabase.getInstance(application).nameSurnameDao()
         val viewModelFactory = MainViewModelFactory(nameDao)
@@ -30,6 +30,16 @@ class NameSurnameFragment : Fragment() {
 
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+
+        binding.saveButton.setOnClickListener {
+            viewModel.addNameSurname()
+            binding.editName.setText("")
+            binding.editSurname.setText("")
+        }
+
+        binding.removeButton.setOnClickListener {
+            viewModel.deleteAllNamesSurnames()
+        }
 
         return binding.root
     }

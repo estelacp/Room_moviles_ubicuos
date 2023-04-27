@@ -1,13 +1,14 @@
 package com.example.room
-//modificamos la clase MainViewModel para que
-// utilice la base de datos y
-// agregue los datos mediante el DAO.
-import androidx.lifecycle.*
+
 import kotlinx.coroutines.launch
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 
+
+// Modificamos la clase MainViewModel para
+// utilizar la base de datos y
+// agregar los datos mediante el DAO.
 class MainViewModel(val nameDao: NameSurnameDao): ViewModel() {
     var name= ""
     var surname= ""
@@ -26,6 +27,7 @@ class MainViewModel(val nameDao: NameSurnameDao): ViewModel() {
             nameDao.insert(namesurname)
         }
     }
+
     fun obtainNameSurname(namesurname: NameSurname): String {
         var namesurn = "${namesurname.name}" +" "
         namesurn += "${namesurname.surname}" +"\n"
@@ -38,32 +40,11 @@ class MainViewModel(val nameDao: NameSurnameDao): ViewModel() {
         }
     }
 
-}
-
-
-/*
-package com.example.room
-
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-
-class MainViewModel : ViewModel() {
-    private val _list = MutableLiveData<String>()
-    val list: LiveData<String>
-        get() = _list
-
-    fun initNameList() {
-        if(_list.value == null){
-            _list.value = ""
+    fun deleteAllNamesSurnames(){
+        viewModelScope.launch {
+            nameDao.deleteAll()
         }
     }
-
-    fun addNameAndSurname(name: String, surname: String) {
-        _list.value = _list.value.toString() + name + " " + surname + "\n"
-    }
 }
-}*/
+
 

@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Room</string>
-    <string name="title">View Model Live Data</string>
-    <string name="edit_name">Nombre</string>
-    <string name="edit_surname">Apellidos</string>
-    <string name="save_button">Añadir</string>
-    <string name="title_name_surname">Nombre y apellidos:</string>
+    <string name="app_name" translatable="false">Room</string>
+    <string name="title" translatable="false">View Model Live Data</string>
+    <string name="edit_name">Name</string>
+    <string name="edit_surname">Surname</string>
+    <string name="save_button">Add</string>
+    <string name="remove_button">Remove database</string>
+    <string name="title_name_surname">Name and Surname:</string>
 </resources>
